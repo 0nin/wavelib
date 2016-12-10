@@ -44,13 +44,13 @@ public:
 	}
 
 	virtual double getMs() {
-		return std::chrono::duration_cast < std::chrono::microseconds
-				> (this->end - this->begin).count() / (double) 1000000.0f;
+		return std::chrono::duration_cast<std::chrono::microseconds>(
+				this->end - this->begin).count() / (double) 1000000.0f;
 	}
 
 	virtual double getSec() {
-		return std::chrono::duration_cast < std::chrono::microseconds
-				> (this->end - this->begin).count() / (double) 1000000.0f;
+		return std::chrono::duration_cast<std::chrono::microseconds>(
+				this->end - this->begin).count() / (double) 1000000.0f;
 	}
 
 protected:

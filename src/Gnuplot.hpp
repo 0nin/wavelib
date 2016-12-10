@@ -10,6 +10,7 @@
 
 #include "Conv.hpp"
 #include "Global.hpp"
+#include "Exception.hpp"
 #include <string>
 #include <vector>
 #include <list>
