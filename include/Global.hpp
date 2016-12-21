@@ -20,8 +20,6 @@
 Core::PathList*
 getPath ();
 
-//template<typename T>
-//extern std::string atos(T real);
 template<typename T>
   std::string
   atos (T real)
@@ -32,19 +30,14 @@ template<typename T>
     if (str.empty ())
       return std::string ("");
 
-//	std::string str = std::to_string(real);
-//	if (str.empty())
-//		return std::string("");
-
     return str;
   }
 
-extern std::string
-rand (size_t range);
-extern bool
-fileExist (const std::string &name);
-extern bool
-isDigit (char ch);
+extern std::string rand(size_t range);
+
+extern bool fileExist(const std::string &name);
+
+extern bool isDigit(char ch);
 
 template<typename T1, typename T2>
   void
@@ -58,48 +51,31 @@ template<typename T1, typename T2>
   }
 
 template<typename T1, typename T2>
-  void
-  printList (const std::list<std::vector<std::pair<T1, T2>>>&dataList)
-    {
-      size_t maxSize = 0;
+void printList(const std::list<std::vector<std::pair<T1, T2>>>&dataList)
+{
+	size_t maxSize = 0;
 
-      for (auto it = dataList.begin(); it != dataList.end(); ++it)
+	for (auto it = dataList.begin(); it != dataList.end(); ++it)
 	{
-	  if (it->size() > maxSize) maxSize = it->size();
+		if (it->size() > maxSize) maxSize = it->size();
 	}
 
-      std::cout << "MaxSize: " << maxSize << std::endl;
-      std::cout << "ListLength: " << dataList.size() << std::endl;
+	std::cout << "MaxSize: " << maxSize << std::endl;
+	std::cout << "ListLength: " << dataList.size() << std::endl;
 
-      for (size_t i = 0; i < maxSize; i++)
+	for (size_t i = 0; i < maxSize; i++)
 	{
-	  for (auto it = dataList.begin(); it != dataList.end(); ++it)
-	    {
-	      if (it->size() > i)
+		for (auto it = dataList.begin(); it != dataList.end(); ++it)
 		{
-		  std::cout << it->at(i).first << " " << it->at(i).second << " ";
+			if (it->size() > i)
+			{
+				std::cout << it->at(i).first << " " << it->at(i).second << " ";
+			}
 		}
-	    }
-	  std::cout << std::endl;
+		std::cout << std::endl;
 	}
-    }
+}
 
-//extern bool datLine(std::string &str);
-//extern bool csv2dat(const std::string &in, const std::string &out);
-//extern bool dat2csv(const std::string &in, const std::string &out);
-
-//extern bool text2vec(const std::string &file, std::vector<std::string> &copy);
-//extern bool vec2dat(const std::vector<std::pair<double, double>> &data,
-//		const std::string &out);
-
-//extern bool list2dat(const std::list<std::vector<std::pair<double, double>>>&dataList, const std::string &out);
-
-//template<typename T1, typename T2>
-//extern bool list2csv(const std::list<std::vector<std::pair<double, double>>>&dataList,
-
-//const std::string &out);
-//extern void flux(const std::vector<std::pair<double, double>> &data,
-//		std::vector<std::pair<double, double>> &diff);
 
 template<typename T1, typename T2>
   void
@@ -231,9 +207,12 @@ template<typename T1, typename T2>
       return true;
     }
 
-extern double
-getTauVec (const std::vector<std::pair<double, double>>&dataVec);
-extern double
-getTauList (const std::list<std::vector<std::pair<double, double>>>&dataList);
+extern double getTauVec (const std::vector<std::pair<double, double>>&dataVec);
+extern double getTauList (const std::list<std::vector<std::pair<double, double>>>&dataList);
+
+template <class T>
+bool getPath (std::string &file, std::string &path) {
+	return Core::PathList::getPathList()->getPath(file, path);
+}
 
 #endif /* GLOBAL_HPP_ */

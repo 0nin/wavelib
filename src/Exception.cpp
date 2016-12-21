@@ -1,8 +1,6 @@
-#include "TextFile.hpp"
 #include "Exception.hpp"
 
 #include "Log.hpp"
-#include "TextFile.hpp"
 
 #if defined __WIN32__ || _WIN32
 #define WIN32_LEAN_AND_MEAN
@@ -25,14 +23,14 @@ namespace Core {
 void Exception::die(std::string msg, std::string t_errorlog) {
 	std::string str = "Exception:: " + msg + " ";
 	std::cerr << str << std::endl;
-	TextFile::write(str, t_errorlog);
+//	TextFile::write(str, t_errorlog);
 	eBox(msg, "Core::Exception");
 }
 
 void Exception::writeToLog(std::string msg, std::string t_errorlog) {
 	std::string str = "Exception:: " + msg + " ";
 	std::cerr << str << std::endl;
-	TextFile::write(str, t_errorlog);
+//	TextFile::write(str, t_errorlog);
 }
 
 //void Exception::error(std::string msg, std::string t_errorlog)

@@ -11,6 +11,7 @@
 #include "Conv.hpp"
 #include "Global.hpp"
 #include "Exception.hpp"
+
 #include <string>
 #include <vector>
 #include <list>
@@ -19,6 +20,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <algorithm>
+
 #ifdef _WIN32
 #define TMPDIR "./tmp/"
 #else
@@ -75,22 +77,17 @@ public:
 	}
 
 	template<class Val1, class Val2>
-	void sendRAM(const std::list<std::vector<std::pair<Val1, Val2>>>&arg)
-	{
+	void sendRAM(const std::list<std::vector<std::pair<Val1, Val2>>>&arg) {
 		std::string tmp;
 
 		size_t maxSize=0;
-		for (auto it = arg.begin(); it != arg.end(); ++it)
-		{
+		for (auto it = arg.begin(); it != arg.end(); ++it) {
 			if (it->size() > maxSize) maxSize = it->size();
 		}
 
-		for (size_t i = 0; i < maxSize; i++)
-		{
-			for (auto it = arg.begin(); it != arg.end(); ++it)
-			{
-				if (it->size() > i)
-				{
+		for (size_t i = 0; i < maxSize; i++) {
+			for (auto it = arg.begin(); it != arg.end(); ++it) {
+				if (it->size() > i) {
 					tmp += atos(it->at(i).first) + " " + atos(it->at(i).second) + " ";
 				}
 			}

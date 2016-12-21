@@ -9,7 +9,7 @@
 #include "Application.hpp"
 #include "Exception.hpp"
 
-using namespace Core;
+//using namespace Core;
 
 int main(int argc, char *args[]) {
 	try {
@@ -19,5 +19,6 @@ int main(int argc, char *args[]) {
 		Core::Exception::die(e.getDescription(), "error.log");
 		return 1;
 	}
+
 	return 0;
 }

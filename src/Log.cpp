@@ -10,7 +10,6 @@
 #include <fstream>
 #include <sstream>
 #include "Exception.hpp"
-#include "TextFile.hpp"
 
 namespace Core {
 

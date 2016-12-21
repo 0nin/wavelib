@@ -16,9 +16,10 @@ namespace cr = CppReadline;
 using ret = cr::Console::ReturnCode;
 
 const char digits[] = "0123456789.\t\n";
+
 static PathList singletonPathList;
 
-Core::PathList* getPath () {
+Core::PathList* getPathList () {
 	return &singletonPathList;
 }
 

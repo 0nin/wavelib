@@ -64,6 +64,8 @@ public:
 		return false;
 	}
 
+	static PathList* getPathList ();
+
 	void print() {
 		for (auto it = _pathList.begin(); it != _pathList.end(); it++) {
 			std::cout << *(it) << std::endl;

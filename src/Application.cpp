@@ -1,6 +1,5 @@
 #include "Application.hpp"
 
-#include "Library.hpp"
 #include <sstream>
 #include <fstream>
 #include <cmath>
@@ -12,11 +11,10 @@
 #include "Exception.hpp"
 #include "Global.hpp"
 #include "Gnuplot.hpp"
-#include "Library.hpp"
 #include "PathList.hpp"
 #include "Runtime.hpp"
 
-#define GREET "(core)"
+#define GREET "(main)"
 
 namespace Core {
 
@@ -24,7 +22,7 @@ namespace cr = CppReadline;
 using ret = cr::Console::ReturnCode;
 
 Application::Application(const std::string &path, const std::string &configFile) :
-		cs("(core)") {
+		cs(GREET) {
 	_exit = false;
 	this->path = path;
 	this->config = configFile;
@@ -35,7 +33,7 @@ Application::~Application(void) {
 }
 
 void Application::init(void) {
-	Library::getSingletonPtr()->loadConfigFile("core.cfg");
+//	Library::getSingletonPtr()->loadConfigFile("core.cfg");
 
 	cs.registerCommand("info", infoCmd);
 	cs.registerCommand("calc", calcCmd);
@@ -80,7 +78,6 @@ void Application::loop(void) {
 	} else {
 //		quit();
 	}
-
 }
 
 void Application::handle(const std::string &msg) {
