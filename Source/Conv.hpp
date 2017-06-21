@@ -14,7 +14,8 @@
 #include <algorithm>
 #include <iterator>
 #include <random>
-#include "Common.h"
+
+#include "../Source/Common.h"
 
 namespace Conv {
 

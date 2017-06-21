@@ -1,8 +1,8 @@
 #ifndef _Application_h_
 #define _Application_h_
 
-#include "Common.h"
-#include "Console.hpp"
+#include "../Source/Common.h"
+#include "../Source/Console.hpp"
 
 #if defined __WIN32__ || _WIN32 && defined _MSC_VER
 #define PLATFORM WIN32_VISUAL

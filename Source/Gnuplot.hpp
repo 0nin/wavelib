@@ -8,10 +8,6 @@
 #ifndef GNUPLOT_HPP_
 #define GNUPLOT_HPP_
 
-#include "Conv.hpp"
-#include "Global.hpp"
-#include "Exception.hpp"
-
 #include <string>
 #include <vector>
 #include <list>
@@ -20,6 +16,9 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <algorithm>
+#include "../Source/Conv.hpp"
+#include "../Source/Exception.hpp"
+#include "../Source/Global.hpp"
 
 #ifdef _WIN32
 #define TMPDIR "./tmp/"

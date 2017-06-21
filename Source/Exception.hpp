@@ -1,7 +1,7 @@
 #ifndef _Exception_h_
 #define _Exception_h_
 
-#include "Common.h"
+#include "../Source/Common.h"
 //#include "TextFile.hpp"
 
 namespace Core {

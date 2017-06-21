@@ -8,7 +8,7 @@
 #ifndef BASH_HPP_
 #define BASH_HPP_
 
-#include "Common.h"
+#include "../Source/Common.h"
 
 namespace Core {
 

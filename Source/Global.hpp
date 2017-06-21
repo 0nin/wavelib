@@ -14,8 +14,9 @@
 #include <algorithm>
 #include <iterator>
 #include <random>
-#include "Common.h"
-#include "PathList.hpp"
+
+#include "../Source/Common.h"
+#include "../Source/PathList.hpp"
 
 Core::PathList*
 getPath ();

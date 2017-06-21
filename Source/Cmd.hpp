@@ -8,7 +8,7 @@
 #ifndef CMD_HPP_
 #define CMD_HPP_
 
-#include "Common.h"
+#include "../Source/Common.h"
 
 // Readline commands
 extern unsigned
